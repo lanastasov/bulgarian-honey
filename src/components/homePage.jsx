@@ -35,15 +35,21 @@ const HomePage = () => {
               </div>
               <div className="container-widget">
                 <div className="container-button-wrapper">
-                  <a href="#contact-us" class="elementor-button" role="button">
-                    <span class="elementor-button-content-wrapper">
-                      <span class="elementor-button-icon elementor-align-icon-right">
+                  <a
+                    href="#contact-us"
+                    className="elementor-button"
+                    role="button"
+                  >
+                    <span className="elementor-button-content-wrapper">
+                      <span className="elementor-button-icon elementor-align-icon-right">
                         <i
                           aria-hidden="true"
-                          class="fas fa-long-arrow-alt-right"
+                          className="fas fa-long-arrow-alt-right"
                         ></i>{" "}
                       </span>
-                      <span class="elementor-button-text">Contact us now</span>
+                      <span className="elementor-button-text">
+                        Contact us now
+                      </span>
                     </span>
                   </a>
                 </div>

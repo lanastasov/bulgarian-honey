@@ -37,7 +37,12 @@ div#container {
   height: 100%;
 }
 
-.container-hover {
+.container-text-editor {
+  color: #fff;
+}
+
+.container-hover,
+.container-hover-2 {
   /* background-color: rgba(43, 43, 43, 0.5);
   background-color: rgba(33, 78, 202, 0.5); */
   min-height: 660px;
@@ -51,6 +56,14 @@ div#container {
   opacity: 0.7;
   align-items: center;
 }
+.container-hover-2 {
+  min-height: auto;
+}
+.container-hover-2 h2.heading-title {
+  color: #21325e;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+}
 
 .container-row {
   color: #fff;
@@ -61,6 +74,7 @@ div#container {
 }
 
 .container-column {
+  color: black;
   width: 50%;
   position: relative;
   min-height: 1px;
@@ -119,8 +133,57 @@ h2.heading-title {
   border-radius: 0px 0px 0px 0px;
   padding: 0px 0px 4px 0px;
 }
+.elementor-button-2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  fill: #ffffff;
+  color: #ffffff;
+  background-color: #cca876;
+  border-radius: 2px 2px 2px 2px;
+  padding: 15px 20px 15px 20px;
+}
+.elementor-button-2:hover {
+  background-color: #92754c;
+  color: #fff;
+}
 
 .elementor-button:focus,
 .elementor-button:hover {
   color: #cca876;
+}
+
+.container-shape {
+  transform: rotate(180deg);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  line-height: 0;
+  direction: ltr;
+  bottom: -1px;
+}
+
+.container-section {
+  padding: 50px 0px 50px 0px;
+}
+
+.widget-container {
+  position: absolute;
+  margin: 30px 0px 0px 0px;
+  padding: 0px 0px 0px 15px;
+  border-style: solid;
+  border-width: 0px 0px 0px 5px;
+  border-color: #21325e;
+}
+
+section.container-section {
+  position: relative;
+}
+
+.elementor-widget:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.elementor-button-wrapper {
+  text-align: right;
 }
