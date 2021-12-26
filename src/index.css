@@ -20,3 +20,107 @@ code {
   max-height: 70px;
   margin-left: 40%;
 }
+
+div#container {
+  min-height: 660px;
+  background-image: url(./img/crackers-dates-delicious-1152276.jpg);
+}
+#container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+.navbar-brand img.homepage {
+  width: 100%;
+  height: 100%;
+}
+
+.container-hover {
+  /* background-color: rgba(43, 43, 43, 0.5);
+  background-color: rgba(33, 78, 202, 0.5); */
+  min-height: 660px;
+  max-width: 1220px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  top: 0px;
+  z-index: 3;
+  opacity: 0.7;
+  align-items: center;
+}
+
+.container-row {
+  color: #fff;
+  /* background: #333; */
+  text-shadow: none;
+  width: 100%;
+  display: flex;
+}
+
+.container-column {
+  width: 50%;
+  position: relative;
+  min-height: 1px;
+  display: flex;
+  padding: 60px 50px 60px 50px;
+  position: relative;
+}
+.container-column-2 {
+  background: #333;
+}
+
+.container-element {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.container-widget {
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s,
+    -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
+
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+h2.heading-title {
+  color: #f2b668;
+  font-size: 26px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  mix-blend-mode: color-dodge;
+}
+
+.container-divider {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.divider-separator {
+  display: inline-block;
+  width: 10%;
+  border-top: 2px solid #cca876;
+}
+.elementor-button {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  fill: #ffffff;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  border-radius: 0px 0px 0px 0px;
+  padding: 0px 0px 4px 0px;
+}
+
+.elementor-button:focus,
+.elementor-button:hover {
+  color: #cca876;
+}
