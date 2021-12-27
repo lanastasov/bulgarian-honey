@@ -2,11 +2,11 @@ import React from "react";
 
 const OurProducts = () => {
   return (
-    <section className="container-section">
+    <section className="container-section our-products-bg">
       <div className="background-overlay"></div>
       <div className="container-hover">
         <div className="container-row">
-          <div className="container-column">
+          <div className="container-column pad-zero">
             <div className="elementor-column-wrap  elementor-element-populated">
               <div className="elementor-widget-wrap">
                 <div
