@@ -79,7 +79,7 @@ div#container {
   position: relative;
   min-height: 1px;
   display: flex;
-  padding: 60px 50px 60px 50px;
+  /* padding: 60px 50px 60px 50px; */
 }
 .container-column-2 {
   background: #333;
@@ -89,6 +89,11 @@ div#container {
   position: relative;
   margin-bottom: 20px;
   width: 100%;
+  padding: 60px 50px 60px 50px;
+}
+
+.elementor-widget-container.offer-2 {
+  padding-bottom: 20px;
 }
 
 .container-widget {
@@ -185,6 +190,13 @@ section.container-section {
 
 .elementor-button-wrapper {
   text-align: right;
+}
+
+.container-column-wrap {
+  padding: 10px;
+}
+.elementor-column-wrap2 {
+  padding: 10px;
 }
 
 /* Our Products */
@@ -317,4 +329,8 @@ section.container-section {
 .elementor-element-0e65a4b,
 .elementor-text-editor {
   text-align: center;
+}
+
+.elementor-text-editor-left {
+  text-align: left;
 }
