@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTruckMoving } from "@fortawesome/free-solid-svg-icons";
 
 const OurProducts = () => {
   return (
@@ -217,7 +219,98 @@ const OurProducts = () => {
               </div>
             </div>
           </div>
-          <div className="container-column"></div>
+          <div className="container-column pad-zero">
+            <div className="elementor-widget-wrap our-product-2">
+              <section
+                className="elementor-element elementor-element-592f9fa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
+                data-id="592f9fa"
+                data-element_type="section"
+              >
+                <div className="elementor-container elementor-column-gap-default">
+                  <div className="elementor-row">
+                    <div
+                      className="elementor-element elementor-element-afede6d elementor-column elementor-col-100 elementor-inner-column"
+                      data-id="afede6d"
+                      data-element_type="column"
+                    >
+                      <div className="elementor-column-wrap  elementor-element-populated ourProduct2">
+                        <div className="elementor-widget-wrap">
+                          <div
+                            className="elementor-element elementor-element-f9edce1 elementor-view-default elementor-widget elementor-widget-icon"
+                            data-id="f9edce1"
+                            data-element_type="widget"
+                            data-widget_type="icon.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-icon-wrapper">
+                                <div className="elementor-icon">
+                                  <i
+                                    aria-hidden="true"
+                                    className="fas fa-truck-moving"
+                                  ></i>
+                                  <FontAwesomeIcon
+                                    icon={faTruckMoving}
+                                    color="#cca876"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-0e65a4b elementor-widget elementor-widget-heading"
+                            data-id="0e65a4b"
+                            data-element_type="widget"
+                            data-widget_type="heading.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <h2 className="elementor-heading-title elementor-size-default">
+                                Transport
+                              </h2>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-9ba6d4d elementor-widget elementor-widget-divider"
+                            data-id="9ba6d4d"
+                            data-element_type="widget"
+                            data-widget_type="divider.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-divider">
+                                <span className="elementor-divider-separator"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-0829e93 elementor-widget elementor-widget-text-editor"
+                            data-id="0829e93"
+                            data-element_type="widget"
+                            data-widget_type="text-editor.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-text-editor elementor-clearfix">
+                                <p>
+                                  We include, if required,&nbsp;
+                                  <b>transport&nbsp;</b>to the customer’s
+                                  premises, through our partners who are
+                                  specialized in international transport of
+                                  honey.
+                                </p>
+                                <p>
+                                  We deliver&nbsp;<b>across Europe</b>, of
+                                  course adding to the product all the necessary
+                                  analyses and certification.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
     </section>
