@@ -362,3 +362,7 @@ section.container-section {
   margin-left: auto;
   margin-right: auto;
 }
+
+label b {
+  color: red;
+}

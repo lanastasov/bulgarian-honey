@@ -18,7 +18,7 @@ class RequestForm extends Component {
             </h2>
             <div className="col-md-6">
               <label for="inputName" className="form-label">
-                Name
+                Name<b>*</b>
               </label>
               <input type="text" className="form-control" id="inputName" />
             </div>
@@ -30,13 +30,13 @@ class RequestForm extends Component {
             </div>
             <div className="col-md-6">
               <label for="inputPhone" className="form-label">
-                Phone
+                Phone<b>*</b>
               </label>
               <input type="tel" className="form-control" id="inputPhone" />
             </div>
             <div className="col-md-6">
               <label for="inputEmail4" className="form-label">
-                Email
+                Email<b>*</b>
               </label>
               <input type="email" className="form-control" id="inputEmail4" />
             </div>
@@ -134,7 +134,8 @@ class RequestForm extends Component {
             <div className="col-12">
               <div className="form-check">
                 <label className="form-check-label" for="gridCheck">
-                  Check me out
+                  GDPR Acceptance
+                  <b>*</b>
                 </label>
                 <br />
                 <input
