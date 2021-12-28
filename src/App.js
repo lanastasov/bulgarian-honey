@@ -3,8 +3,8 @@ import HomePage from "./components/homePage";
 import OffersPage from "./components/offersPage";
 import OurProducts from "./components/ourProducts";
 import LocationPage from "./components/locationPage";
-// import GoogleMap from "./components/googleMaps";
 import MapSection from "./components/map/Map";
+import RequestForm from "./components/requestForm";
 
 const location = {
   address:
@@ -22,6 +22,7 @@ function App() {
       <OurProducts />
       <LocationPage />
       <MapSection location={location} zoomLevel={18} />
+      <RequestForm />
     </div>
   );
 }
