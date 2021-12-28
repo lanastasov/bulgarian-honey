@@ -11,12 +11,14 @@ const OffersPage = () => {
       <div className="container-hover-2">
         <div className="container-row">
           <div className="container-column">
-            <div className="widget-container">
-              <h2 className="heading-title">Offers and stocks</h2>
+            <div className="container-column-wrap">
+              <div className="widget-container">
+                <h2 className="heading-title">Offers and stocks</h2>
+              </div>
             </div>
           </div>
           <div className="container-column">
-            <div className="elementor-column-wrap  elementor-element-populated">
+            <div className="elementor-column-wrap">
               <div className="elementor-widget-wrap">
                 <div
                   className="elementor-element elementor-element-87a070a elementor-widget elementor-widget-text-editor"
@@ -25,7 +27,7 @@ const OffersPage = () => {
                   data-widget_type="text-editor.default"
                 >
                   <div className="elementor-widget-container">
-                    <div className="elementor-text-editor elementor-clearfix">
+                    <div className="elementor-text-editor-left elementor-clearfix">
                       <p>
                         There is immediately available (
                         <strong>August/September 2021</strong>) for export :

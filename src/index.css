@@ -79,7 +79,7 @@ div#container {
   position: relative;
   min-height: 1px;
   display: flex;
-  padding: 60px 50px 60px 50px;
+  /* padding: 60px 50px 60px 50px; */
 }
 .container-column-2 {
   background: #333;
@@ -89,6 +89,11 @@ div#container {
   position: relative;
   margin-bottom: 20px;
   width: 100%;
+  padding: 60px 50px 60px 50px;
+}
+
+.elementor-widget-container.offer-2 {
+  padding-bottom: 20px;
 }
 
 .container-widget {
@@ -174,6 +179,12 @@ h2.heading-title {
   border-width: 0px 0px 0px 5px;
   border-color: #21325e;
 }
+.widget-container-location {
+  padding: 0px 0px 0px 15px;
+  border-style: solid;
+  border-width: 0px 0px 0px 5px;
+  border-color: #21325e;
+}
 
 section.container-section {
   position: relative;
@@ -185,6 +196,13 @@ section.container-section {
 
 .elementor-button-wrapper {
   text-align: right;
+}
+
+.container-column-wrap {
+  padding: 10px;
+}
+.elementor-column-wrap2 {
+  padding: 10px;
 }
 
 /* Our Products */
@@ -204,6 +222,12 @@ section.container-section {
   margin: 0px 0px 30px 0px;
   padding: 0px 0px 10px 0px;
 }
+/* .elementor-widget-container {
+  padding: 0px 0px 0px 15px;
+  border-style: solid;
+  border-width: 0px 0px 0px 5px;
+  border-color: #21325e;
+} */
 
 .elementor-icon {
   display: inline-block;
@@ -317,4 +341,24 @@ section.container-section {
 .elementor-element-0e65a4b,
 .elementor-text-editor {
   text-align: center;
+}
+
+.elementor-text-editor-left {
+  text-align: left;
+}
+
+/* LocationPage */
+
+.elementor-column-wrap-location-page {
+  padding: 10px;
+}
+
+.container-section.location-page {
+  padding: 50px 0px 0px 0px;
+}
+
+.elementor-container {
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
 }
