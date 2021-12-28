@@ -366,3 +366,9 @@ section.container-section {
 label b {
   color: red;
 }
+
+.btn-primary.message {
+  background-color: #21325e;
+  padding: 14px 20px;
+  line-height: 1;
+}

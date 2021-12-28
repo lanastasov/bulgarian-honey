@@ -152,7 +152,7 @@ class RequestForm extends Component {
               </div>
             </div>
             <div className="col-12">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary message">
                 SEND
               </button>
             </div>
