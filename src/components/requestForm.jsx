@@ -17,7 +17,7 @@ class RequestForm extends Component {
       .length(10)
       .regex(/^[0-9]+$/),
     email: Joi.string().email({ tlds: { allow: false } }),
-    gdpr: Joi.boolean().valid(true),
+    gdpr: Joi.boolean().invalid(false),
   };
 
   validate = () => {
@@ -41,18 +41,10 @@ class RequestForm extends Component {
     console.log("submitted");
   };
   validateProperty = ({ name, value }) => {
-    if (name === "name") {
-      if (value.trim() === "") return "Name is required!";
-    }
-    if (name === "phone") {
-      if (value.trim() === "") return "Phone is required!";
-    }
-    if (name === "email") {
-      if (value.trim() === "") return "Email is required!";
-    }
-    if (name === "gdpr") {
-      if (value === false) return "GDPR is required!";
-    }
+    const obj = { [name]: value };
+    const schema = { [name]: this.schema[name] };
+    const { error } = Joi.validate(obj, schema);
+    return error ? error.details[0].message : null;
   };
 
   handleChange = ({ currentTarget: input }) => {
@@ -253,7 +245,11 @@ class RequestForm extends Component {
               </div>
             </div>
             <div className="col-12">
-              <button type="submit" className="btn btn-primary message">
+              <button
+                disabled={this.validate()}
+                type="submit"
+                className="btn btn-primary message"
+              >
                 SEND
               </button>
             </div>
