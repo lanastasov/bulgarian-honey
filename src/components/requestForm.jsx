@@ -1,23 +1,34 @@
 import React, { Component } from "react";
-
+import Joi from "joi-browser";
+// validation of email and phone and name with joi
+// navbar links to open the pages.
+// set state of the other inputs
+// on submit form sends email with the fields
+// implement footer
 class RequestForm extends Component {
   state = {
-    data: { name: "", phone: "", email: "", textarea: "" },
+    data: { name: "", phone: "", email: "", gdpr: false },
     errors: {},
   };
+
+  schema = {
+    name: Joi.string().min(2).required(),
+    phone: Joi.string()
+      .length(10)
+      .regex(/^[0-9]+$/),
+    email: Joi.string().email({ tlds: { allow: false } }),
+    gdpr: Joi.boolean().valid(true),
+  };
+
   validate = () => {
+    const options = { abortEarly: false };
+    const result = Joi.validate(this.state.data, this.schema, options);
+    if (!result.error) return null;
     const errors = {};
-    const { data } = this.state;
-    if (data.name.trim() === "") {
-      errors.name = "name is required";
-    }
-    if (data.phone.trim() === "") {
-      errors.phone = "phone is required";
-    }
-    if (data.email.trim() === "") {
-      errors.email = "email is required";
-    }
-    return Object.keys(errors).length === 0 ? null : errors;
+
+    for (let item of result.error.details) errors[item.path[0]] = item.message;
+
+    return errors;
   };
   handleSubmit = (e) => {
     e.preventDefault();
@@ -39,6 +50,9 @@ class RequestForm extends Component {
     if (name === "email") {
       if (value.trim() === "") return "Email is required!";
     }
+    if (name === "gdpr") {
+      if (value === false) return "GDPR is required!";
+    }
   };
 
   handleChange = ({ currentTarget: input }) => {
@@ -49,6 +63,8 @@ class RequestForm extends Component {
 
     const data = { ...this.state.data };
     data[input.name] = input.value;
+    data.gdpr = input.checked;
+
     this.setState({ data, errors });
   };
 
@@ -217,9 +233,13 @@ class RequestForm extends Component {
                 </label>
                 <br />
                 <input
+                  value={data.gdpr}
                   className="form-check-input"
                   type="checkbox"
                   id="gridCheck"
+                  onChange={this.handleChange}
+                  checked={data.gdpr}
+                  name="gdpr"
                 />
                 <label className="form-check-label" htmlFor="gridCheck">
                   <small>
@@ -227,6 +247,9 @@ class RequestForm extends Component {
                     that they can respond to my request
                   </small>
                 </label>
+                {errors.gdpr && Object.keys(errors).length !== 0 && (
+                  <div className="alert alert-danger">{errors.gdpr}</div>
+                )}
               </div>
             </div>
             <div className="col-12">
