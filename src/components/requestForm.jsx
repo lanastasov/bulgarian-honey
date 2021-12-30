@@ -2,14 +2,54 @@ import React, { Component } from "react";
 
 class RequestForm extends Component {
   state = {
-    data: { name: "", password: "" },
+    data: { name: "", phone: "", email: "", textarea: "" },
     errors: {},
+  };
+  validate = () => {
+    const errors = {};
+    const { data } = this.state;
+    if (data.name.trim() === "") {
+      errors.name = "name is required";
+    }
+    if (data.phone.trim() === "") {
+      errors.phone = "phone is required";
+    }
+    if (data.email.trim() === "") {
+      errors.email = "email is required";
+    }
+    return Object.keys(errors).length === 0 ? null : errors;
   };
   handleSubmit = (e) => {
     e.preventDefault();
 
+    const errors = this.validate();
+    this.setState({ errors: errors || {} });
+    if (errors) return;
+
     // Call the server
     console.log("submitted");
+  };
+  validateProperty = ({ name, value }) => {
+    if (name === "name") {
+      if (value.trim() === "") return "Name is required!";
+    }
+    if (name === "phone") {
+      if (value.trim() === "") return "Phone is required!";
+    }
+    if (name === "email") {
+      if (value.trim() === "") return "Email is required!";
+    }
+  };
+
+  handleChange = ({ currentTarget: input }) => {
+    const errors = { ...this.state.errors };
+    const errorMessage = this.validateProperty(input);
+    if (errorMessage) errors[input.name] = errorMessage;
+    else delete errors[input.name];
+
+    const data = { ...this.state.data };
+    data[input.name] = input.value;
+    this.setState({ data, errors });
   };
 
   render() {
@@ -26,7 +66,17 @@ class RequestForm extends Component {
               <label htmlFor="inputName" className="form-label">
                 Name<b>*</b>
               </label>
-              <input type="text" className="form-control" id="inputName" />
+              <input
+                value={data.name}
+                type="text"
+                className="form-control"
+                id="inputName"
+                name="name"
+                onChange={this.handleChange}
+              />
+              {errors.name && Object.keys(errors).length !== 0 && (
+                <div className="alert alert-danger">{errors.name}</div>
+              )}
             </div>
             <div className="col-md-6">
               <label htmlFor="inputCompany4" className="form-label">
@@ -38,13 +88,33 @@ class RequestForm extends Component {
               <label htmlFor="inputPhone" className="form-label">
                 Phone<b>*</b>
               </label>
-              <input type="tel" className="form-control" id="inputPhone" />
+              <input
+                value={data.phone}
+                name="phone"
+                type="tel"
+                className="form-control"
+                id="inputPhone"
+                onChange={this.handleChange}
+              />
+              {errors.phone && Object.keys(errors).length !== 0 && (
+                <div className="alert alert-danger">{errors.phone}</div>
+              )}
             </div>
             <div className="col-md-6">
               <label htmlFor="inputEmail4" className="form-label">
                 Email<b>*</b>
               </label>
-              <input type="email" className="form-control" id="inputEmail4" />
+              <input
+                value={data.email}
+                name="email"
+                type="email"
+                className="form-control"
+                id="inputEmail4"
+                onChange={this.handleChange}
+              />
+              {errors.email && Object.keys(errors).length !== 0 && (
+                <div className="alert alert-danger">{errors.email}</div>
+              )}
             </div>
             <div className="col-md-12">
               <label htmlFor="inlineCheckbox1" className="form-label">
