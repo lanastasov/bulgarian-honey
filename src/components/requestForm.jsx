@@ -14,10 +14,10 @@ class RequestForm extends Component {
   schema = {
     name: Joi.string().min(2).required(),
     phone: Joi.string()
-      .length(10)
-      .regex(/^[0-9]+$/),
+      .length(13)
+      .regex(/^\+[0-9]+$/),
     email: Joi.string().email({ tlds: { allow: false } }),
-    gdpr: Joi.boolean().invalid(false),
+    gdpr: Joi.boolean().invalid("true"),
   };
 
   validate = () => {
@@ -27,7 +27,6 @@ class RequestForm extends Component {
     const errors = {};
 
     for (let item of result.error.details) errors[item.path[0]] = item.message;
-
     return errors;
   };
   handleSubmit = (e) => {
@@ -42,6 +41,7 @@ class RequestForm extends Component {
   };
   validateProperty = ({ name, value }) => {
     const obj = { [name]: value };
+    console.log`obj= ${obj}, ${typeof obj[name]} `;
     const schema = { [name]: this.schema[name] };
     const { error } = Joi.validate(obj, schema);
     return error ? error.details[0].message : null;
@@ -55,8 +55,8 @@ class RequestForm extends Component {
 
     const data = { ...this.state.data };
     data[input.name] = input.value;
-    data.gdpr = input.checked;
-
+    // data.gdpr = input.checked;
+    data["gdpr"] = input.checked;
     this.setState({ data, errors });
   };
 
