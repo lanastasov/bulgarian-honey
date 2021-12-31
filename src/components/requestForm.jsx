@@ -41,7 +41,6 @@ class RequestForm extends Component {
   };
   validateProperty = ({ name, value }) => {
     const obj = { [name]: value };
-    console.log`obj= ${obj}, ${typeof obj[name]} `;
     const schema = { [name]: this.schema[name] };
     const { error } = Joi.validate(obj, schema);
     return error ? error.details[0].message : null;
