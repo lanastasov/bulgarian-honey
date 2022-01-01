@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import Joi from "joi-browser";
+import { send } from "emailjs-com";
+
+// https://dev.to/daliboru/how-to-send-emails-from-a-form-in-react-emailjs-27d1
+
 // validation of email and phone and name with joi
 // navbar links to open the pages.
 // set state of the other inputs
@@ -7,7 +11,20 @@ import Joi from "joi-browser";
 // implement footer
 class RequestForm extends Component {
   state = {
-    data: { name: "", phone: "", email: "", gdpr: false },
+    data: {
+      name: "",
+      phone: "",
+      email: "",
+      gdpr: false,
+      company: "",
+      acacia: false,
+      polyflora: false,
+      linden: false,
+      qty: "",
+      message: "",
+      conventional: false,
+      organic: false,
+    },
     errors: {},
   };
 
@@ -18,6 +35,14 @@ class RequestForm extends Component {
       .regex(/^\+[0-9]+$/),
     email: Joi.string().email({ tlds: { allow: false } }),
     gdpr: Joi.boolean().invalid("true"),
+    company: Joi.string().allow(""),
+    acacia: Joi.boolean(),
+    polyflora: Joi.boolean(),
+    linden: Joi.boolean(),
+    qty: Joi.string().allow(""),
+    message: Joi.string().allow(""),
+    conventional: Joi.boolean(),
+    organic: Joi.boolean(),
   };
 
   validate = () => {
@@ -38,6 +63,13 @@ class RequestForm extends Component {
 
     // Call the server
     console.log("submitted");
+    send("", "", this.state.data, "")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
   };
   validateProperty = ({ name, value }) => {
     const obj = { [name]: value };
@@ -55,7 +87,10 @@ class RequestForm extends Component {
     const data = { ...this.state.data };
     data[input.name] = input.value;
     // data.gdpr = input.checked;
+    // if (input.name === "gdpr") {
     data["gdpr"] = input.checked;
+    // }
+
     this.setState({ data, errors });
   };
 
@@ -74,7 +109,7 @@ class RequestForm extends Component {
                 Name<b>*</b>
               </label>
               <input
-                value={data.name}
+                value={data.name || ""}
                 type="text"
                 className="form-control"
                 id="inputName"
@@ -131,9 +166,10 @@ class RequestForm extends Component {
               <div className="form-check form-check-inline">
                 <input
                   className="form-check-input"
+                  name="acacia"
                   type="checkbox"
                   id="inlineCheckbox1"
-                  value="option1"
+                  value={data.acacia}
                 />
                 <label className="form-check-label" htmlFor="inlineCheckbox1">
                   Acacia
@@ -168,7 +204,14 @@ class RequestForm extends Component {
                 <br />
                 <small>in MT (metric tons) or KG (please specify)</small>
               </label>
-              <input type="text" className="form-control" id="inputQuantity" />
+              <input
+                type="text"
+                name="qty"
+                className="form-control"
+                id="inputQuantity"
+                value={data.qty || ""}
+                onChange={this.handleChange}
+              />
             </div>
             <div className="col-md-6">
               <label htmlFor="gridRadios1" className="form-label">
@@ -211,8 +254,11 @@ class RequestForm extends Component {
               </label>
               <textarea
                 className="form-control"
+                name="message"
                 id="exampleFormControlTextarea1"
                 rows="8"
+                value={data.message || ""}
+                onChange={this.handleChange}
               ></textarea>
             </div>
 
@@ -245,7 +291,7 @@ class RequestForm extends Component {
             </div>
             <div className="col-12">
               <button
-                disabled={this.validate()}
+                // disabled={this.validate()}
                 type="submit"
                 className="btn btn-primary message"
               >
