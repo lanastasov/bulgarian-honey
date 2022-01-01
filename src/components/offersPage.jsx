@@ -4,7 +4,7 @@ import offersPageSVG from "../img/offersPage.svg";
 // import OffersPage from "./offersPage";
 const OffersPage = () => {
   return (
-    <section className="container-section">
+    <section id="offers" className="container-section">
       <div className="container-shape">
         <img src={offersPageSVG} alt="" />
       </div>

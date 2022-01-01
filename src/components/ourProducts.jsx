@@ -4,7 +4,7 @@ import { faTruckMoving } from "@fortawesome/free-solid-svg-icons";
 
 const OurProducts = () => {
   return (
-    <section className="container-section our-products-bg">
+    <section id="products" className="container-section our-products-bg">
       <div className="background-overlay"></div>
       <div className="container-hover">
         <div className="container-row">
