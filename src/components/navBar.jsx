@@ -26,19 +26,19 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
-            <a className="nav-link active" aria-current="page" href="#">
+            <a className="nav-link active" aria-current="page" href="/">
               Home
             </a>
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="#offers">
               Offers
             </a>
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="#products">
               Our Products
             </a>
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="#location">
               Location
             </a>
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="#contact-us">
               Request a quotation
             </a>
           </div>

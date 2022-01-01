@@ -3,7 +3,7 @@ import offersPageSVG from "../img/offersPage.svg";
 
 const LocationPage = () => {
   return (
-    <section className="container-section location-page">
+    <section id="location" className="container-section location-page">
       <div className="container-shape">
         <img src={offersPageSVG} alt="" />
       </div>
