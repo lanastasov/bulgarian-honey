@@ -372,3 +372,211 @@ label b {
   padding: 14px 20px;
   line-height: 1;
 }
+
+/* Footer Page */
+
+.site-footer {
+  position: relative;
+}
+#footer-widgets {
+  background-color: #3f444a;
+  color: #a0a8b1;
+  padding: 30px 0;
+  margin: 0;
+}
+
+#footer-widgets .footer-box {
+  padding: 0 15px;
+  margin: 0;
+}
+
+body .oceanwp-row .col {
+  float: left;
+  margin: 0 0 20px;
+  padding: 0 10px;
+}
+
+body .oceanwp-row .span_1_of_2 {
+  width: 50%;
+}
+#footer-widgets .footer-box .footer-widget:last-child {
+  margin-bottom: 0;
+}
+
+#footer-widgets .footer-box .widget-title {
+  font-size: 11px;
+  color: #fff;
+}
+#footer-widgets .footer-box .footer-widget ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#footer-widgets .footer-box a,
+#footer-widgets a {
+  color: #75828c;
+}
+.oceanwp-custom-links li {
+  padding: 2px 0;
+}
+.oceanwp-custom-links li a {
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+  color: #333;
+}
+
+.count-1,
+.col-1,
+.col.first {
+  clear: both;
+  margin-left: 0;
+}
+
+.oceanwp-custom-links li a:before {
+  content: "\f111";
+  display: inline-block;
+  color: #929292;
+  font-size: 10px;
+  margin-right: 10px;
+  margin-top: -2px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  vertical-align: middle;
+  zoom: 1;
+}
+
+#footer-widgets .col {
+  margin-bottom: 30px;
+}
+
+/* important style */
+.col:after,
+.clr:after,
+.group:after,
+dl:after,
+.left_float:after,
+.right_float:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+  height: 0;
+}
+
+.widget-title {
+  display: block;
+  line-height: 1;
+  font-size: 13px;
+  font-weight: 400;
+  color: #333;
+  border-width: 0 0 0 3px;
+  border-style: solid;
+  border-color: #13aff0;
+  letter-spacing: 1px;
+  padding-left: 15px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  border-color: #21325e;
+}
+
+#footer-widgets .contact-info-widget li {
+  margin: 0 0 14px;
+}
+
+.contact-info-widget li {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+}
+
+#footer-widgets .contact-info-widget i,
+#footer-widgets .contact-info-widget svg {
+  color: #cca876;
+}
+
+.contact-info-widget .oceanwp-info-wrap,
+.contact-info-widget span.oceanwp-contact-title,
+.contact-info-widget span.oceanwp-contact-text {
+  display: block;
+}
+
+#footer-widgets li,
+#footer-widgets #wp-calendar caption,
+#footer-widgets #wp-calendar th,
+#footer-widgets #wp-calendar tbody,
+#footer-widgets .contact-info-widget i,
+#footer-widgets .contact-info-widget svg,
+#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"],
+#footer-widgets .posts-thumbnails-widget li,
+#footer-widgets .social-widget li a {
+  border-color: #202326;
+}
+
+.contact-info-widget.default .oceanwp-info-wrap {
+  padding-left: 55px;
+}
+
+#footer-widgets,
+#footer-widgets p,
+#footer-widgets li a:before,
+#footer-widgets .contact-info-widget span.oceanwp-contact-title,
+#footer-widgets .recent-posts-date,
+#footer-widgets .recent-posts-comments,
+#footer-widgets .widget-recent-posts-icons li .fa {
+  color: #a0a8b1;
+}
+
+.contact-info-widget span.oceanwp-contact-title {
+  color: #777;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.contact-info-widget span.oceanwp-contact-text {
+  line-height: 18px;
+}
+
+#footer-widgets .footer-box a,
+#footer-widgets a {
+  color: #75828c;
+}
+
+.contact-info-widget.default svg {
+  float: left;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #e9e9e9;
+  color: #13aff0;
+  margin-right: 15px;
+  text-align: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#footer-widgets .footer-box a:hover,
+#footer-widgets a:hover {
+  color: #ffffff;
+}
+
+.oceanwp-custom-links li a:hover {
+  margin-left: 8px;
+  color: #13aff0;
+}
