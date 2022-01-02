@@ -26,6 +26,7 @@ class RequestForm extends Component {
       organic: false,
     },
     errors: {},
+    submitErr: "",
   };
 
   schema = {
@@ -71,9 +72,11 @@ class RequestForm extends Component {
     )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        this.setState({ submitErr: "false" });
       })
       .catch((err) => {
         console.log("FAILED...", err);
+        this.setState({ submitErr: "true" });
       });
   };
   validateProperty = ({ name, value }) => {
@@ -302,6 +305,16 @@ class RequestForm extends Component {
               >
                 SEND
               </button>
+              {this.state.submitErr === "true" && (
+                <div className="alert alert-danger">
+                  {"Message Was Not Send"}
+                </div>
+              )}
+              {this.state.submitErr === "false" && (
+                <div className="alert alert-success">
+                  {"Message Submitted Successfully"}
+                </div>
+              )}
             </div>
           </form>
         </div>

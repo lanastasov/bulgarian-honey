@@ -11,8 +11,8 @@ const FooterPage = () => {
     <footer
       id="footer"
       className="site-footer"
-      itemscope="itemscope"
-      itemtype="http://schema.org/WPFooter"
+      itemScope="itemscope"
+      itemType="http://schema.org/WPFooter"
     >
       <div id="footer-inner" className="clr">
         <div id="footer-widgets" className="oceanwp-row clr">
