@@ -37,8 +37,8 @@ const LocationPage = () => {
                   <div className="elementor-widget-container">
                     <div className="elementor-text-editor-left elementor-clearfix">
                       <div>
-                        Our company is situated in the Romanian region of&nbsp;
-                        <b>Wallachia</b>&nbsp;(Southern Romania), a place
+                        Our company is situated in the Bulgarian region of&nbsp;
+                        <b>Blagoevgrad </b>&nbsp;(South-East Bulgaria), a place
                         traditionally devoted to the&nbsp;
                         <b>honey production</b>, thanks to the presence of
                         <b>&nbsp;high mountain lawns</b>&nbsp;and native&nbsp;
@@ -65,22 +65,8 @@ const LocationPage = () => {
                         <div>&nbsp;</div>
                         <div>
                           Reaching us is very simple: we are located in{" "}
-                          <a
-                            href="https://maps.google.ro/maps?hl=it&amp;q=ploiesti&amp;ie=UTF-8&amp;hq=&amp;hnear=0x40b249f6a8d6eff7:0xb3fe6965e659119,Ploie%C8%99ti&amp;gl=ro&amp;ei=O0V2UJH5A5KHswby04C4AQ&amp;sqi=2&amp;ved=0CBwQ8gEwAA"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            Ploiesti
-                          </a>
-                          , not far from Bucharest, about 30 km away from the{" "}
-                          <a
-                            href="http://www.bucharestairports.ro/index.php?lang=en"
-                            target="_blank"
-                            rel="nofollow noopener"
-                          >
-                            Otopeni International Airport (Henri Coanda)
-                          </a>
-                          .
+                          Blagoevgrad , not far from Sofia, about 100 km away
+                          from the Sofia International Airport.
                         </div>
                       </div>
                       <div>&nbsp;</div>
