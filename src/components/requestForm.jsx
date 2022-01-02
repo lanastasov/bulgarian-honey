@@ -63,7 +63,12 @@ class RequestForm extends Component {
 
     // Call the server
     console.log("submitted");
-    send("", "", this.state.data, "")
+    send(
+      "service_czbzquo",
+      "template_atlx08p",
+      this.state.data,
+      "user_sYxYO2N1sElC2Qr7d3ida"
+    )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
       })
