@@ -5,6 +5,7 @@ import OurProducts from "./components/ourProducts";
 import LocationPage from "./components/locationPage";
 import MapSection from "./components/map/Map";
 import RequestForm from "./components/requestForm";
+import FooterPage from "./components/footerPage";
 
 const location = {
   address:
@@ -23,6 +24,7 @@ function App() {
       <LocationPage />
       <MapSection location={location} zoomLevel={18} />
       <RequestForm />
+      <FooterPage />
     </div>
   );
 }
