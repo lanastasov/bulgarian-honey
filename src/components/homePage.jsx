@@ -26,8 +26,8 @@ const HomePage = () => {
                   <p>
                     We are <em>raw-honey</em> addicts, dedicated exclusively to
                     honey and to products from beekeeping. We have been working
-                    for years on the Romanian territory, selecting the highest
-                    quality product for our customers. Romanian Raw Honey. Our
+                    for years on the Bulgarian territory, selecting the highest
+                    quality product for our customers. Bulgarian Raw Honey. Our
                     main institutional buyers are located in Italy and Germany.
                   </p>
                   <p>Do you want to know more ?</p>

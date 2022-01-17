@@ -47,10 +47,9 @@ const OurProducts = () => {
                         >
                           <span className="" title="">
                             e are an <strong>authorized company</strong> to the
-                            EU honey export by the Romanian state Authority
-                            (DSVSA). We work in accordance with the{" "}
-                            <strong>HACCP</strong> rules. We can provide
-                            documentation on request.
+                            EU honey export by the Bulgarian state Authority. We
+                            work in accordance with the <strong>HACCP</strong>{" "}
+                            rules. We can provide documentation on request.
                           </span>
                         </span>
                       </p>

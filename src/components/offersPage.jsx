@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import offersPageSVG from "../img/offersPage.svg";
 
 // import OffersPage from "./offersPage";
