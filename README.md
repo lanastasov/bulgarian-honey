@@ -1,4 +1,5 @@
-# bulgarian-honey
+# bulgarian-honey - collect requests for honey prices and quantities.
+
 - Header
 - Homepage
 - Offers Page
